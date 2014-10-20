@@ -29,20 +29,19 @@ public class Grader {
    Scanner scnr = new Scanner(System.in);
    double finalScore = 0;
    
-   System.out.print("Please enter the number of points on the test,or a negative number to end the fuction.");
+   System.out.println("Please enter the number of points on the test, or a negative number to end the fuction.");
    double numPoints = scnr.nextDouble();
-   if (numPoints > -1) {
+   while (numPoints > -1) {
       System.out.println("Please enter the number of points missed.");
       double missedPoints = scnr.nextDouble();
       finalScore = numPoints - missedPoints;
       System.out.println("Your final score is " +finalScore);
       }
-   else{
+
    System.out.println("Thank you -- have a great day!");
    }
    
-   return;
-   }
+   
    
    }  
 
