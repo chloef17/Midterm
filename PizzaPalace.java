@@ -11,16 +11,24 @@
  * @author <change to your name>
  * @version <today's date>
  */
+ 
+ import java.util.Scanner;
+
 public class PizzaPalace {
 
 	public static void main(String[] args) {
-		// TODO Replace this section with your own code
-		
-		// NOTE
-		// The Math class provides a function, ceiling(), which will take a double
-		// and return the next higher integer value.
-		// For example, Math.ceiling(4.125) would evaluate to 5
+   Scanner scnr = new Scanner(System.in);
+   double totalPies = 0;
+   
+   System.out.println("Please enter the number of people eating pizza.");
+   double numPeople = scnr.nextDouble();
+   System.out.println("Please enter the number of slices per person.");
+   double numSlice = scnr.nextDouble();
+   System.out.println("Please enter the number of slices per pie.");
+   double numPie = scnr.nextDouble();
+   totalPies = (numPeople*numSlice)/numPie;
+   System.out.println("You need to order " + Math.ceil(totalPies) + " pies.");
 
-	}
+  	}
 
 }
